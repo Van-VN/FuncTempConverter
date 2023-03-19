@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Temperature Convereter</h1>
+    <p>Type a value in F field to convert the value to Celcius</p>
+    <p style="display: inline-block; padding-right: 30px">Fahrenheit</p>
+    <input
+      type="number"
+      placeholder="Choose temperature in Fahrenheit"
+      id="fTemp"
+      oninput="convertFToC()"
+    />
+    <br />
+    <p style="display: inline-block; padding-right: 30px">Celcius</p>
+    <div style="display: inline-block" id="outputCelcius"></div>
+  </body>
+</html>
+<script>
+
+    function convertFToC() {
+        let fTemp = document.getElementById('fTemp').value;
+        document.getElementById('outputCelcius').innerHTML = (fTemp - 32)/1.8;
+    }
+
+//   function tempConverter(fValue) {
+//     let result = (fValue - 32) / 1.8;
+//     return result;
+//   }
+
+//   function convertFToC() {
+//     let degreeF = +document.getElementById('fTemp').value;
+//     let degreeC = tempConverter(degreeF);
+//     console.log(degreeC,degreeF);
+//     document.getElementById("outputCelcius").innerHTML = degreeC;
+//   }
+
+</script>
